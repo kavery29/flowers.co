@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Flowers.co</title>
+</head>
+<style>
+    .topnav {
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+}
+.topnav img{
+    height:32px;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  /* background-colo */
+  color: rgb(255, 87, 137);
+}
+.topnav i{
+    color: rgb(131, 131, 131);
+    font-size: 25px;
+    margin:0.5vw;
+    float:right;
+}
+.topnav i:hover{
+    color:rgb(255, 87, 137)
+}
+.topnav .icon {
+  display: none;
+}
+    .btn:hover{
+        background-color: rgb(255, 95, 122);
+        color:white;
+    }
+    .mp {
+        background-image: url(flower/main.png);
+        background-size:99vw 90vh;
+        /* margin-top:30vw; */
+        background-repeat: no-repeat;
+        padding:6vw;
+    }
+    .mp h2{
+        color: rgb(41, 41, 41);
+        font-size:6vh;
+    }
+    .mp h1{
+        color:rgb(255, 95, 122);
+    }
+    .mp h4{
+        color:rgb(131, 131, 131);
+    }
+    .btn{
+        color:white;
+        background-color: black;
+        border-radius: 20px;
+        padding:8px;
+        padding-left:15px;
+        padding-right:15px;
+        border:0px;
+    }
+    .about{
+        /* border:1px solid lightgrey; */
+        padding:2vw;
+        margin-left:10vw;
+        text-align: center;
+        margin-right:10vw;
+        /* display:flex; */
+    }
+    .display{
+        display:flex;
+    }
+    .display img{
+        height:300px;
+        margin:2vh;
+        padding:3vh;
+        /* border:1px solid rgb(204, 204, 204); */
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .content{
+        display:block;
+        text-align: left;
+        padding:3vh;
+    }
+    .box{
+        background-color: rgb(255, 239, 241);
+        color: rgb(255, 87, 137);
+        padding:0px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .icons{
+        background-color: rgb(240, 240, 240);
+        display:flex;
+        padding:4vh;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .i1 h4{
+        display:flex;
+    }
+    .i1 img{
+        height:80px;
+        display:flex;
+    }
+    .icons .i1{
+        background-color: white;
+        display:flex;
+        height:80px;
+        width:230px;
+        margin:20px;
+        padding:0px;
+        transition: transform .2s;
+    }
+    .i1:hover{
+        transform: scale(1.1);
+    }
+    .con1 h4{
+        margin:0px;
+        margin-top:18px;
+    }
+    #margin1 img{
+        margin:15px;
+        height:60px;
+    }
+    .con1 p{
+        margin: 0px;
+    }
+    .product{
+        padding:2vw;
+        margin-left:10vw;
+        text-align: center;
+        margin-right:10vw;
+        justify-content: center;
+        align-items: center;
+    }
+    .pot{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .boq img{
+        height:270px;
+    }
+    .boq h2{
+        margin:5px;
+    }
+    .boq{
+        width:280px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin:20px;
+        transition: transform .2s;
+        position: relative;
+    }
+    .boq:hover{
+        transform: scale(1.05);
+    }
+    .rev i{
+        color:rgb(255, 95, 122);
+        margin:2px;
+    }
+    .rev{
+        height:270px;
+        width:300px;
+        margin:15px;
+        padding:2px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        transition: transform .2s;
+    }
+    .rev p1{
+        margin-bottom: 50px;
+    }
+    .rev:hover{
+        transform: scale(1.05);
+    }
+    .rev img{
+        height:60px;
+    }
+    /* .contact{
+        display:flex;
+        justify-content: center;
+        text-align: center;
+    } */
+    .input{
+        height:300px;
+        width:290px;
+        /* border: 4px solid lightgray; */
+        padding:5px;
+        margin:3vw;
+        font-size: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-right:2vw;
+        margin-bottom:3px;
+        padding-bottom: 0px;
+    }
+    .input input{
+        margin:10px;
+        width:240px;
+        height:30px;
+    }
+    .input .btn{
+        margin-top:10px;
+    }
+    .foot{
+        display:block;
+        float:left;
+        margin:4vw;
+        border-bottom:2px solid rgb(255, 95, 122);
+        margin-bottom:0px;
+        margin-top:0px;
+    }
+    .foot p:hover{
+        color: rgb(255, 95, 122);
+    }
+    .bl {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+#contact img{
+    height:30vw; 
+    float:right; 
+    padding:4vh; 
+    padding-bottom:0px;
+}
+@media(max-width:1300px){
+    .input{
+        margin:10px;
+    }
+    #contact img{
+        padding:10px;
+    }
+}
+@media(max-width:1000px){
+    .product{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin:0px;
+    }
+    .display{
+        display:flex;
+        flex-wrap: wrap;
+        margin:0.5vw;
+        padding:0.5vw;
+    }
+}
+@media (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media(max-width:600px){
+    .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .rev {
+      height:280px;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+    mp{
+        background-size:auto;
+    }
+    h1{
+        font-size:3vh;
+    }
+    .foot{
+        display:flex;
+        flex-wrap: wrap;
+        margin:0px;
+        padding:0px;
+    }
+    .foot p{
+        margin:1.5vw;
+        display:block;
+        margin-top:5vw;
+    }
+    .input{
+        margin-top:4vw;
+        padding:0.5vw;
+        height:35vh;
+        align-items: center;
+        justify-content: center;
+        margin-right:8vw;
+    }
+    .about{
+        margin:0px;
+    }
+    #contact img{
+        height:68vw;
+    }
+    .display img{
+        height:28vh;
+        width:90vw;
+        margin:0.5vw;
+        padding:0.5vw;
+    }
+    .block i{
+        font-size:0px;
+    }
+}
+
+</style>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="#" class="active"><img src="flower/logof.jpg"</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#review">Review</a>
+        <a href="#product">Products</a>
+        <a href="#contact">Contact</a>
+        <div class="block"><i class="fa fa-shopping-cart"></i>
+        <i class="fa fa-heart"></i>
+        <i class="fa fa-user"></i></div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+     
+    <div class="mp" id="home"><br>
+        <h2>Fresh Flowers</h2>
+        <h1>Natural and beautiful flowers</h1>
+        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Quis 
+        Placeat distinctio, sit eos itaque fugiat dolorum ad animi <br>quos minima aliquam adipisci aut laudantium<br> facilis voluptate officiis quis. </h4>
+        <button class="btn">Shop Now</button><br><br><br><br><br><br>
+    </div><br>
+    <div class="about" id="about">
+        <div class="box">
+        <h1>About Us</h1></div>
+        <div class="display">
+            <img src="flower/display.jpg"> 
+            <div class="content">
+            <h2>Why Choose Us</h2>
+            <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum atque nesciunt possimus consequuntur amet soluta ab vero molestias! Exercitationem veniam tempora velit voluptate suscipit consequuntur expedita maiores quam, soluta voluptas.<br><br>
+            Incidunt repudiandae, doloremque praesentium saepe distinctio numquam magnam officiis optio reiciendis obcaecati nemo magni veniam est consequatur. Officia quibusdam voluptatum culpa ea accusamus ad earum adipisci eaque molestiae, esse fugit..</h4>
+            <button class="btn">Learn More</button>
+        </div>
+        </div>
+    </div>
+    <div class="icons">
+        <div class="i1">
+            <img src="flower/freeship.jpg">
+            <div class="con1">
+            <h4>Free shipping</h4>
+            <p>on all orders</p></div>
+        </div>
+        <div class="i1" id="margin1">
+            <img src="flower/easy return.png">
+            <div class="con1">
+                <h4>Free shipping</h4>
+                <p>on all orders</p></div>
+        </div>
+        <div class="i1" id="margin1">
+            <img src="flower/payment.png">
+            <div class="con1">
+                <h4>Free shipping</h4>
+                <p>on all orders</p></div>
+        </div>
+        <div class="i1" id="margin1">
+            <img src="flower/gifts.jpg">
+            <div class="con1">
+                <h4>Free shipping</h4>
+                <p>on all orders</p></div>
+        </div>
+        <br><br><br><br><br>
+    </div>
+    <div class="product" id="product">
+        <div class="box">
+        <h1>Latest Products</h1></div>
+        <div class="pot">
+            <div class="boq">
+                <img src="flower/f1.jpg">
+                <h2>Flower Pot</h2>
+                <h2 style="color:rgb(255, 95, 122);">$15.55</h2>
+            </div>
+            <div class="boq">
+                <img src="flower/f2.jpeg">
+                <h2>Flower Pot</h2>
+                <h2 style="color:rgb(255, 95, 122);">$15.55</h2>
+            </div>
+            <div class="boq">
+                <img src="flower/f3.jpg">
+                <h2>Flower Pot</h2>
+                <h2 style="color:rgb(255, 95, 122);">$15.55</h2>
+            </div>
+            <div class="boq">
+                <img src="flower/f4.jpeg">
+                <h2>Flower Pot</h2>
+                <h2 style="color:rgb(255, 95, 122);">$15.55</h2>
+            </div>
+            <div class="boq">
+                <img src="flower/f5.jpeg">
+                <h2>Flower Pot</h2>
+                <h2 style="color:rgb(255, 95, 122);">$15.55</h2>
+            </div>
+            <div class="boq">
+                <img src="flower/f6.jpg">
+                <h2>Flower Pot</h2>
+                <h2 style="color:rgb(255, 95, 122);">$15.55</h2>
+            </div>
+            <div class="boq">
+                <img src="flower/f1.jpg">
+                <h2>Flower Pot</h2>
+                <h2 style="color:rgb(255, 95, 122);">$15.55</h2>
+            </div>
+            <div class="boq">
+                <img src="flower/f2.jpeg">
+                <h2>Flower Pot</h2>
+                <h2 style="color:rgb(255, 95, 122);">$15.55</h2>
+            </div>
+            <div class="boq">
+                <img src="flower/f3.jpg">
+                <h2>Flower Pot</h2>
+                <h2 style="color:rgb(255, 95, 122);">$15.55</h2>
+            </div>
+        </div>
+    </div>
+    <div class="product" id="review">
+        <div class="box">
+            <h1>Customer's Review</h1></div>
+        <div class="pot"> 
+        <div class="rev">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet odio a corrupti, cumque nisi quibusdam est suscipit fugit distinctio id, ut soluta minus, molestias debitis nulla quidem harum qui. Deserunt!
+            Molestias vitae ducimus eum quos alias aperiam minus ad eos quas est vel, quibusdam accusantium</p>
+            <img src="flower/profile.jpg"><p1>Johny Dep</p1>
+        </div>
+        <div class="rev">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet odio a corrupti, cumque nisi quibusdam est suscipit fugit distinctio id, ut soluta minus, molestias debitis nulla quidem harum qui. Deserunt!
+            Molestias vitae ducimus eum quos alias aperiam minus ad eos quas est vel, quibusdam accusantium</p>
+            <img src="flower/profile.jpg"><p1>Johny Dep</p1>
+        </div>
+        <div class="rev">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet odio a corrupti, cumque nisi quibusdam est suscipit fugit distinctio id, ut soluta minus, molestias debitis nulla quidem harum qui. Deserunt!
+            Molestias vitae ducimus eum quos alias aperiam minus ad eos quas est vel, quibusdam accusantium</p>
+            <img src="flower/profile.jpg"><p1>Johny Dep</p1>
+        </div></div>
+    </div>
+    <div class="product" id="contact">
+        <div class="box">
+            <h1>Contact Us</h1></div>
+        <div class="pot">
+        <div class="input">
+            <form action="backened.php">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Number">
+            <input type="text" placeholder="Message">
+            </form>
+            <button class="btn">Send Message</button>
+        </div>
+        <img src="flower/adobe.svg">
+    </div></div>
+    <div class="product">
+        <div class="foot">
+            <h3>Quick Links</h3>
+            <p>Home</p>
+            <p>About</p>
+            <p>Products</p>
+            <p>Review</p>
+        </div>
+        <div class="foot">
+            <h3>Extra Links</h3>
+            <p>My account</p><p>My orders</p><p>My favourite</p>
+        </div>
+        <div class="foot">
+            <h3>Locations</h3>
+            <p>India</p><p>USA</p><p>Japan</p><p>France</p>
+        </div>
+        <div class="foot">
+            <h3>Contact Info</h3>
+            <p>+91 882710942</p><p>shoppers@gmail.com</p><p>Mumbai-India-410032</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
